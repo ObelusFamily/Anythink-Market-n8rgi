@@ -16,7 +16,10 @@ router.param("item", function (req, res, next, slug) {
       }
 
       req.item = item;
-      req.item.image = item.image === "" ? "placeholder.png" : item.image;
+      req.item.image =
+        item.image === ""
+          ? "https://github.com/ObelusFamily/Anythink-Market-n8rgi/blob/main/frontend/public/placeholder.png?raw=true"
+          : item.image;
 
       return next();
     })
